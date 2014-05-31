@@ -70,3 +70,14 @@ Create a Photo model extending Backbone.Model in app/scripts/models/photo.js to 
 
 Also create Photo Collection extending Backbone.Collection in app/scripts/collections/photos.js to work with Photo sets.
 
+
+# Step six
+
+At this point we have the core foundation for our backbone application and can start getting into the functional requirements of our photo application.
+The first requirement is to display a set of photos for a users search, so lets start with the search and creating a search box in our template and connecting an event listener.  The current app view should be broken up into app and results views, so the results view can display the photo list and app can handle doing the search.
+
+
+
+
+
+
