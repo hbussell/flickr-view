@@ -1,0 +1,8 @@
+{
+  "name": "flickr-viewer",
+  "version": "0.0.1",
+
+  "scripts": {
+    "preinstall": "sudo npm install -g yo"
+  }
+}
