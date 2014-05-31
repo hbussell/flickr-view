@@ -19,6 +19,8 @@ require.config({
         }
     },
     paths: {
+        flickrview: 'app',
+        photo: 'models/Photo',
         jquery: '../bower_components/jquery/jquery',
         backbone: '../bower_components/backbone/backbone',
         underscore: '../bower_components/underscore/underscore',
@@ -26,9 +28,10 @@ require.config({
     }
 });
 
-require([
-    'backbone'
-], function (Backbone) {
+define([
+    'backbone',
+    'views/app',
+], function (Backbone, AppView) {
     Backbone.history.start();
-    console.log('Hello from Backbone!');
+    new AppView;
 });

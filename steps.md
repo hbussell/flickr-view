@@ -46,4 +46,18 @@ Note the --force optionis used to ignore any jshint errors.
 
 You can now load the domain in your browser and see a styled application.
 
+Try using the grunt built in server to test out its development mode.
+
+    grunt serve
+
+
+# Step four
+
+Lets render our app with backbone by creating the main application view in app/scripts/views/app.js
+
+It will be a backbone view which defines an intialize hook and renders some content into into the dom using a `el` attribute as the target selector.
+
+Define a render method in the view which sets the html on the $el property.
+
+Check the page displaying the rendered content using `grunt server`
 
