@@ -1,18 +1,15 @@
 define([
     'jquery',
     'backbone',
-    'collections/photos',
     ], 
-function($, Backbone, PhotoCollection) {
+function($, Backbone) {
 
 
   var App = Backbone.View.extend({
 
     el: '#photoapp',
 
-
     initialize: function() {
-      photoCollection = new PhotoCollection();
       this.render();
     },
 
