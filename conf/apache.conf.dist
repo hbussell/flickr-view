@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    ServerName local.flickrview
+
+    DocumentRoot /var/docroot/flickr-view/dist
+    <Directory /var/docroot/flickr-view/dist>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride None
+        Require all granted
+        Order allow,deny
+        allow from all
+    </Directory>
+</VirtualHost>
+
