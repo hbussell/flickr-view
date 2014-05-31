@@ -48,7 +48,7 @@ You can now load the domain in your browser and see a styled application.
 
 Try using the grunt built in server to test out its development mode.
 
-    grunt serve
+    grunt server
 
 
 # Step four
