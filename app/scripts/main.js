@@ -19,8 +19,6 @@ require.config({
         }
     },
     paths: {
-//        flickrview: 'app',
-        photo: 'models/Photo',
         jquery: '../bower_components/jquery/jquery',
         backbone: '../bower_components/backbone/backbone',
         underscore: '../bower_components/underscore/underscore',
