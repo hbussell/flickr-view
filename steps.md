@@ -16,6 +16,7 @@ Now run the yeoman generator
 
     yo backbone-amd
 
+Select sass
 Ensure requirejs is selected.
 You will be prompted to overrite the existing package.json and .gitignore, hit y to continue.
 
