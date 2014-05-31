@@ -5,9 +5,12 @@ This will read the package.json manifest and run the preinstall script to instal
 # Step two
 Use the yeoman generator for backbone-amd to setup a basic project.
 https://github.com/abiee/generator-backbone-amd
-Add backbone-amd to devDependancies in package.json
 
-    npm install . --save-dev
+Add backbone-amd to devDependencies in package.json
+
+See https://www.npmjs.org/doc/json.html#devDependencies
+
+    npm install . --dev
 
 Now run the yeoman generator
 
