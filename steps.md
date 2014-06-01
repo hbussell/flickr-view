@@ -73,11 +73,13 @@ Also create Photo Collection extending Backbone.Collection in app/scripts/collec
 
 # Step six
 
-At this point we have the core foundation for our backbone application and can start getting into the functional requirements of our photo application.
-The first requirement is to display a set of photos for a users search, so lets start with the search and creating a search box in our template and connecting an event listener.  The current app view should be broken up into app and results views, so the results view can display the photo list and app can handle doing the search.
+At this point we have the core foundation for our backbone application and can start getting into the functional requirements of our application.
 
+The first requirement is to display a list of photos based of a user search, so we need a component to display photos, something to handle user search and then some way to connect up the events. To add a user search form we can just add the input tags to the `index.html` under the `#photoapp` div so the App view can capture form events.
+Then to display the photo list we should add a new `PhotoListView` which can take a reference to a `PhotoCollection` and render the photo details.  Then connecting the elements together can be done in the `AppView` by creating the `PhotoListView` and passing in an instance of the `PhotoCollection`.  That way the `AppView` can update the collection and changes will be automaticaly rendred in the list.  
 
+To add the event listener to the `AppView` we can use the `events` attribute provideded by backbone views which maps selectors to function names.  In the event handler we can add new `PhotoModel` instances to the collection which will trigger the list to render.
 
-
+Confim you can do a seach and the list count increments.
 
 
