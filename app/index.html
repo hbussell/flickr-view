@@ -16,6 +16,17 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+        <script id="photosTemplate" type="text/template">
+
+<div id="photos">
+<% _.each(photos, function(photo) { %>
+  <div class="photo">
+    Photo <%= photo.id %>
+  </div>
+<% }); %>
+</div>
+
+        </script>
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -39,6 +50,7 @@
                 <input type="text" id="search-box"/>
                 <button>Search</button>
               </div>
+
               <div id="photo-list"></div>
             </div>
         </div>

@@ -1,11 +1,14 @@
 define([
     'jquery',
     'backbone',
+    'underscore'
     ], 
 function($, Backbone) {
   var PhotoList = Backbone.View.extend({
 
     el: '#photo-list',
+
+    template: _.template($('#photosTemplate').html()),
 
     initialize: function(options) {
       this.collection = options.collection;
@@ -16,7 +19,7 @@ function($, Backbone) {
     },
 
     render: function() {
-      this.$el.html( 'Photo count:' + this.collection.length);
+      this.$el.html(this.template({photos: this.collection.toJSON()}));
     }
 
   });
