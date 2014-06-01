@@ -21,7 +21,7 @@
 <div id="photos">
 <% _.each(photos, function(photo) { %>
   <div class="photo">
-    Photo <%= photo.id %>
+    <img src="http://farm<%= photo.farm %>.static.flickr.com/<%= photo.server %>/<%= photo.id %>_<%= photo.secret %>_m.jpg" alt="<%= photo.title %>"/>
   </div>
 <% }); %>
 </div>
@@ -50,7 +50,7 @@
                 <input type="text" id="search-box"/>
                 <button>Search</button>
               </div>
-
+              <div class="loading">Loading...</div>
               <div id="photo-list"></div>
             </div>
         </div>

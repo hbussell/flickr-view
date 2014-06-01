@@ -89,3 +89,13 @@ body {
         border-bottom: 0;
     }
 }
+
+.loading {
+background-image: url(/images/loading.png);
+background-releat:no-repeat;
+background-position:center center;
+padding-left:120px;
+width:48px;
+height:48px;
+display:none;
+}

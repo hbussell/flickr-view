@@ -1,8 +1,8 @@
-# Step one
+# Step one - Getting started
 Clone the repo and run getting started steps.
 This will read the package.json manifest and run the preinstall script to install yeoman globally.
 
-# Step two
+# Step two - Yeoman generator
 Use the yeoman generator for backbone-amd to setup a basic project.
 https://github.com/abiee/generator-backbone-amd
 
@@ -25,7 +25,7 @@ Now lets use the generator to create our Photo model.
     yo backbone-amd:model Photo
 
 
-# Step three
+# Step three - Domain setup
 
 Lets setup the domain and view the site in the browser to check the setup has worked.
 
@@ -51,7 +51,7 @@ Try using the grunt built in server to test out its development mode.
     grunt serve
 
 
-# Step four
+# Step four - Backbone App View
 
 Lets render our app with backbone by creating the main application view in app/scripts/views/app.js
 
@@ -62,7 +62,7 @@ Define a render method in the view which sets the html on the $el property.
 Check the page displaying the rendered content using `grunt server`
 
 
-# Step five
+# Step five - Backbone Model
 
 Now we have a view rendering to the page we can start looking at the data model and create a basic model and collection for our photos.
 
@@ -71,7 +71,7 @@ Create a Photo model extending Backbone.Model in app/scripts/models/photo.js to 
 Also create Photo Collection extending Backbone.Collection in app/scripts/collections/photos.js to work with Photo sets.
 
 
-# Step six
+# Step six - User Search
 
 At this point we have the core foundation for our backbone application and can start getting into the functional requirements of our application.
 
@@ -82,4 +82,23 @@ To add the event listener to the `AppView` we can use the `events` attribute pro
 
 Confim you can do a seach and the list count increments.
 
+
+# Step seven - Template Rendering
+
+Now lets start rendering the photo collection from the `PhotoListView`.  The view has a reference to the collection models and just needs to pass that through to an underscore template.  The template can be a script tag with in the `index.html` which loops over a list of photos and prints their ids.  
+
+# Step eight - Connecting to Flickr Api
+
+At this point we should have a basic application that renders lists of photo models after a user does a search using fake photo data.  Lets replace the fake data with real Flickr results.
+
+
+Have a look at the Flickr Api exporer to see what options are available for the search end point and what data you get back.
+https://www.flickr.com/services/api/explore/flickr.photos.search
+
+
+Add a new search function to the `PhotoCollection` which can take a search string and fire off a request to the Flickr api.  
+The results can be created into new `PhotoModel`s and added to the collection, causing the view to render.
+The `AppView` already has a function to handle the search and has a reference to the collection so it only needs to call the search function passing the users search text.
+
+Currently the api key used is hard coded but you create a new one by registering your own app https://www.flickr.com/services/apps/create/
 
