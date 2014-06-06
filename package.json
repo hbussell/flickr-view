@@ -3,6 +3,6 @@
   "version": "0.0.1",
 
   "scripts": {
-    "preinstall": "sudo npm install -g yo"
+    "preinstall": "sudo npm install -g yo generator-angular-require; yo angular-require flickr-view"
   }
 }
