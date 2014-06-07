@@ -115,3 +115,13 @@ As all the dependencies have been added to the package.json you can simply run i
     npm install
     npm start
 
+# Step ten - Add bootstrap and initial template
+
+As with the backbone project we will use bootstrap to style our page, so add `sass-bootstrap` to our bower.json and run a install.
+
+Rename the initial views and controllers to fit our project.
+
+
+
+Add sass-bootstrap as a bow
+

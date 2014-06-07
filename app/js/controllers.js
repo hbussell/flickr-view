@@ -1,11 +1,10 @@
-'use strict';
+exports.PhotoCtrl = function($scope) {  
+  $scope.query = '';
+  $scope.photos = [];
 
-exports.MyCtrl1 = function($scope) {  
-  $scope.message = 'controller 1';
-  console.log('controller 1')
+  $scope.submitSearch = function(){
+      console.log('do search action:: ');
+      console.log($scope.query);
+  }
 };
 
-exports.MyCtrl2 = function($scope) {  
-  $scope.message = 'controller 2';
-  console.log('controller 2')
-}; 

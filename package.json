@@ -21,6 +21,7 @@
     "node": ">=0.8.0"
   },
   "scripts": {
+    "preinstall": "bower install",
     "install": "napa; node_modules/.bin/browserify ./app/js/index.js > ./app/js/bundle.js",
     "start": "node_modules/.bin/browserify ./app/js/index.js > ./app/js/bundle.js; node_modules/.bin/beefy ./js/index.js:js/bundle.js --liv --cwd ./app"
   },

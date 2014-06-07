@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search photos: <input ng-model="query">
+      <input type="submit" value="Search" ng-click="submitSearch()">
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      
+      <ul class="photos">
+        <li ng-repeat="photo in photos" class="thumbnail">
+          <img ng-src="{{photo.imageUrl}}">
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

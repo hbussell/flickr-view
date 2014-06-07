@@ -1,15 +1,11 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-exports.MyCtrl1 = function($scope) {  
+exports.PhotoCtrl = function($scope) {  
   $scope.message = 'controller 1';
   console.log('controller 1')
 };
 
-exports.MyCtrl2 = function($scope) {  
-  $scope.message = 'controller 2';
-  console.log('controller 2')
-}; 
 
 },{}],2:[function(require,module,exports){
 'use strict';
@@ -22,18 +18,14 @@ var app = angular.module('app', ['ngRoute']);
 
 app.config(['$routeProvider', '$httpProvider',  
   function($routeProvider, $httpProvider) {
-    $routeProvider.when('/view1', {
-      templateUrl: './views/view1.html', 
-      controller: 'MyCtrl1'
-    }).when('/view2', { 
-      templateUrl: './views/view2.html', 
-      controller: 'MyCtrl2'
-    }).otherwise({redirectTo: '/view1'});
+    $routeProvider.when('/photos', {
+      templateUrl: './views/photos.html', 
+      controller: 'PhotoCtrl'
+    }).otherwise({redirectTo: '/photos'});
   }
 ]); 
 
-app.controller('MyCtrl1', ['$scope', controllers.MyCtrl1]);  
-app.controller('MyCtrl2', ['$scope', controllers.MyCtrl2]);  
+app.controller('PhotoCtrl', ['$scope', controllers.PhotoCtrl]);  
 
 },{"./controllers":1,"angular-route/angular-route":3,"angular/angular":4}],3:[function(require,module,exports){
 /**
