@@ -102,3 +102,16 @@ The `AppView` already has a function to handle the search and has a reference to
 
 Currently the api key used is hard coded but you create a new one by registering your own app https://www.flickr.com/services/apps/create/
 
+# Step nine - Convert to angular
+
+Now lets get to Angular and use some of its superpowers in this application.
+
+Another change is from requirejs to browserify.  The motivation is the increased simplicity of modules using the commonjs syntax and not having to use callbacks.
+
+Following this blog post we can setup a basic angular browserify project http://ethanway.com/angular-and-browserify/.
+
+As all the dependencies have been added to the package.json you can simply run install and start to give this a go.
+
+    npm install
+    npm start
+
